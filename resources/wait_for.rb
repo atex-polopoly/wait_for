@@ -40,5 +40,5 @@ action :run do
     return if out
     sleep new_resource.interval
   end
-  raise unless out
+  raise 'Time out waiting!' unless out
 end
